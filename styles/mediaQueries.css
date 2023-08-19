@@ -1,0 +1,290 @@
+/* media queries */
+
+@media (max-width: 540px) {
+  .navbar {
+    position: relative;
+    background-color: #fff;
+  }
+
+  .navbar .menu-list {
+    position: absolute;
+    width: 100%;
+    height: 3em;
+    left: 0;
+    top: 4em;
+    opacity: 0;
+    background-color: #0c356a;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .navbar .menu-list.show {
+    opacity: 1;
+  }
+
+  .navbar .menu-list li a {
+    color: #fff;
+  }
+}
+
+@media (min-width: 541px) {
+  /* header */
+  .navbar .site-logo {
+    font-size: 1.25rem;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 1.05rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    text-align: center;
+  }
+
+  h1 div {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  /* hero section */
+
+  .hero-section {
+    margin-top: 2em;
+    min-height: 87vh;
+  }
+
+  /* footer */
+
+  footer figure {
+    height: 200px;
+  }
+
+  /* cards section */
+  .cards-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* card */
+
+  .card {
+    width: calc(50% - 0.5em);
+    border-radius: 0.5em;
+  }
+
+  .card figure img {
+    border-radius: 0.5em 0.5em 0 0;
+  }
+}
+
+@media (min-width: 840px) {
+  /* header */
+
+  .navbar .site-logo {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1 div {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  /* footer */
+
+  footer .main-content {
+    flex-direction: row;
+  }
+
+  footer .site-logo {
+    font-size: 1.5rem;
+  }
+
+  footer h2 {
+    font-size: 1.15rem;
+    width: 80%;
+  }
+
+  footer p {
+    font-size: 0.95rem;
+  }
+
+  footer img {
+    margin-left: 1em;
+  }
+
+  footer figure {
+    width: 60%;
+    height: 200px;
+    margin-top: 0;
+  }
+
+  /* explore section */
+
+  .explore-section .container {
+    flex-direction: row;
+  }
+
+  /* filter section */
+
+  .filter-section {
+    width: calc(23% - 1em);
+    height: 500px;
+    margin-right: 1em;
+    border-radius: 0.5em;
+    margin-top: 0;
+  }
+
+  .filter-section ul {
+    flex-direction: column;
+    gap: 0.15em;
+  }
+
+  .filter-section .category-link.selected,
+  .filter-section .location-link.selected {
+    transform-origin: 0 0;
+    transform: scale(1.15);
+  }
+
+  /* cards section */
+  .cards-section {
+    width: calc(77% - 1em);
+    max-height: 1400px;
+    padding: 0 1em 1em 0.5em;
+    margin: 0 5em 0 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* header */
+
+  .navbar .site-logo {
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h1 div {
+    font-size: 2.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+  }
+
+  /* footer */
+
+  footer .main-content {
+    flex-direction: row;
+  }
+
+  footer .site-logo {
+    font-size: 2.5rem;
+  }
+
+  footer h2 {
+    font-size: 1.75rem;
+    width: 100%;
+  }
+
+  footer p {
+    font-size: 1.15rem;
+  }
+
+  footer img {
+    margin-left: 3em;
+  }
+
+  footer figure {
+    height: 300px;
+  }
+
+  .explore-section .container {
+    padding: 0;
+  }
+
+  /* filter section */
+
+  .filter-section {
+    width: calc(25% - 1em);
+    height: 600px;
+    padding: 1em 2em;
+    border-radius: 1em;
+    margin-right: 2em;
+  }
+
+  .filter-section h4 {
+    font-size: 1.35rem;
+  }
+
+  .filter-section .category-link,
+  .filter-section .location-link {
+    font-size: 1.05rem;
+  }
+
+  /* cards section */
+  .cards-section {
+    width: calc(75% - 1em);
+    padding: 0 2em 1em 1em;
+    gap: 2em;
+  }
+
+  /* card */
+
+  .card {
+    width: calc(50% - 1em);
+    border-radius: 1em;
+  }
+
+  .card .card-content {
+    padding: 1em;
+  }
+
+  .card figure {
+    height: 250px;
+  }
+
+  .card figure img {
+    border-radius: 1em 1em 0 0;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card .rating {
+    font-size: 1.25rem;
+  }
+
+  .card .star {
+    width: 1.15em;
+    height: 1.15em;
+  }
+
+  .card .details,
+  .card .location {
+    font-size: 1rem;
+  }
+
+  /* hotel card */
+
+  .hotel-card .price {
+    font-size: 1.25rem;
+  }
+}

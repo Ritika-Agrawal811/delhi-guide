@@ -10,23 +10,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/mediaQueries.css" />
     <title>Delhi Guide</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav class="navbar container">
-        <a href="#" class="site-logo">Delhi Guide</a>
+        <a href="#" class="site-logo"
+          ><i class="fa-solid fa-archway"></i> Delhi Guide</a
+        >
 
         <button class="hamburger" id="hamburgerMenu">
           <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="menu-list" id="menuList">
           <li>
-            <a href="">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="">Explore</a>
+            <a href="#explore">Explore</a>
           </li>
         </ul>
       </nav>
@@ -38,7 +41,87 @@
         <p class="subtitle">Find great places to stay, eat, shop or visit.</p>
       </section>
     </header>
+    <main class="explore-section" id="explore">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="wave-bg"
+      >
+        <path
+          fill="#8be8e5"
+          fill-opacity="1"
+          d="M0,192L40,176C80,160,160,128,240,149.3C320,171,400,245,480,272C560,299,640,277,720,261.3C800,245,880,235,960,208C1040,181,1120,139,1200,133.3C1280,128,1360,160,1400,176L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="container">
+        <aside class="filter-section">
+          <div class="filter-block">
+            <h4>Categories</h4>
+            <ul id="categoryList"></ul>
+          </div>
+          <div class="filter-block">
+            <h4>Location</h4>
+            <ul id="locationList"></ul>
+          </div>
+        </aside>
+        <section class="cards-section" id="cardsSection">
+          <!-- <article class="card school-card">
+            <figure>
+              <img
+                src="images/radisson-blu-hotel.jpg"
+                alt="radisson blu hotel"
+              />
+            </figure>
+            <div class="card-content">
+              <h3>Modern School</h3>
+              <div class="flex-gap">
+                <p class="rating">
+                  3.8
+                  <span class="star"></span>
+                </p>
+                <p class="location">
+                  <i class="fa-solid fa-location-dot"></i> Mandi House
+                </p>
+              </div>
+              <div class="details">
+                <p>
+                  <i class="fa-solid fa-school"></i> Principal: Dr Vijay Datta
+                </p>
+                <p><i class="fa-solid fa-user-group"></i> Faculty: 120</p>
+                <p><i class="fa-solid fa-calendar"></i> Founded: 1920</p>
 
-    <script src="script.js" defer></script>
+                <p>
+                  Friendly & Supportive Staff &#9679; Clean Washrooms &#9679;
+                  English Medium
+                </p>
+              </div>
+            </div>
+          </article> -->
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container main-content">
+        <div>
+          <a href="#" class="site-logo"
+            ><i class="fa-solid fa-archway"></i> Delhi Guide</a
+          >
+
+          <h2>Discover : The Beautiful Capital of India</h2>
+          <p>Find great places to stay, eat, shop or visit.</p>
+        </div>
+        <figure>
+          <img src="images/red-fort.png" alt="red fort" />
+        </figure>
+      </div>
+      <hr />
+      <div class="container">
+        <p class="copyright">Copyright &#169; 2023</p>
+      </div>
+    </footer>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/classes.js"></script>
+    <script src="scripts/script.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@700&family=Yatra+One&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(transparent 20%, #8be8e5);
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-gap {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* navigation */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.site-logo {
+  font-family: "Yatra One", cursive;
+  font-size: 1.25rem;
+  color: #0c356a;
+  font-weight: 700;
+}
+
+.hamburger {
+  display: block;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 1.25rem;
+  color: #ef5b0c;
+}
+
+.navbar .menu-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar .menu-list li a {
+  margin-left: 1em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ef5b0c;
+}
+
+/* Hero Section */
+
+.hero-section {
+  background-image: url("../images/delhi-skyline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5em;
+  height: 300px;
+  padding: 0 1em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0c356a;
+  font-family: "Yatra One", cursive;
+  font-weight: 700;
+}
+
+h1 div {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  color: #ef5b0c;
+  margin-top: -0.25em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.subtitle {
+  margin-top: 1em;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #262626;
+}
+
+/* footer */
+
+footer {
+  background-color: #0c356a;
+  color: #fff;
+  padding: 3em 0 1em 0;
+  margin-top: 3em;
+}
+
+footer hr {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+footer .copyright {
+  text-align: center;
+}
+
+footer .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+footer figure {
+  width: 100%;
+  height: 130px;
+  margin-top: 2em;
+}
+
+footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+footer .site-logo {
+  color: #ef5b0c;
+  font-size: 2rem;
+}
+
+footer h2 {
+  font-size: 1.25rem;
+  margin-top: 0.25em;
+}
+
+footer p {
+  font-size: 0.85rem;
+  margin-top: 1em;
+}
+
+/* main content */
+
+.explore-section {
+  scroll-margin-top: -10em;
+}
+
+.explore-section .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+}
+
+.filter-section {
+  background-color: #fff;
+  box-shadow: 0 0 0.5em #ddd;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 2em;
+}
+
+.filter-section .filter-block {
+  margin-bottom: 1em;
+}
+
+.filter-section h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5em;
+  color: #0c356a;
+  font-weight: 700;
+}
+
+.filter-section ul {
+  list-style-type: none;
+  margin-left: 0.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em 0.5em;
+}
+
+.filter-section .category-link,
+.filter-section .location-link {
+  font-size: 0.85rem;
+  color: #262626;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 250ms ease-in-out;
+}
+
+.filter-section .category-link:hover,
+.filter-section .location-link:hover {
+  color: #ef5b0c;
+  font-weight: 700;
+}
+
+.filter-section .category-link.selected,
+.filter-section .location-link.selected {
+  color: #ef5b0c;
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+/* Cards Section */
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-height: 1040px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: 3em 0;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+
+.cards-section::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.cards-section::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.cards-section::-webkit-scrollbar-thumb {
+  background-color: #0c356a;
+  border-radius: 100vmax;
+}
+
+/* Card */
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 0.5em #ddd;
+  border-radius: 1em;
+  color: #262626;
+  transform-origin: 50% 0;
+  animation: zoomIn 500ms ease-in-out 1;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card figure {
+  height: 200px;
+}
+
+.card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1em 1em 0 0;
+}
+
+.card .card-content {
+  padding: 0.5em;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  color: #7c73c0;
+  margin-bottom: 0.25em;
+}
+
+.card .rating {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.card .star {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: #fbbc04;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  margin-left: 0.25em;
+}
+
+.card .location {
+  font-weight: 700;
+  color: #ef5b0c;
+  font-size: 0.75rem;
+}
+
+.card .location i {
+  margin-right: 0.25em;
+}
+
+.card .details {
+  color: #545454;
+  margin: 1em 0 0.5em 0;
+  font-size: 0.75rem;
+}
+
+.card .details i {
+  margin-right: 0.25em;
+}
+
+.card .details p {
+  margin-bottom: 0.5em;
+}
+
+/* Hotel Card */
+
+.hotel-card .price {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.hotel-card .details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hotel-card .details span {
+  display: flex;
+}
+
+.hotel-card .details i {
+  display: flex;
+  justify-content: center;
+  width: 1.5em;
+}
+
+/* Mall Card */
+
+.mall-card .details p {
+  margin-bottom: 0.25em;
+}
+
+/* Salon Card */
+
+.salon-card .details p span {
+  font-weight: 700;
+}
