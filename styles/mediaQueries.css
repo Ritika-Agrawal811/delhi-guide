@@ -143,7 +143,7 @@
 
   .filter-section {
     width: calc(23% - 1em);
-    height: 500px;
+    height: 570px;
     margin-right: 1em;
     border-radius: 0.5em;
     margin-top: 0;
@@ -155,7 +155,8 @@
   }
 
   .filter-section .category-link.selected,
-  .filter-section .location-link.selected {
+  .filter-section .location-link.selected,
+  #customerRating.selected {
     transform-origin: 0 0;
     transform: scale(1.15);
   }
@@ -223,7 +224,7 @@
 
   .filter-section {
     width: calc(25% - 1em);
-    height: 600px;
+    height: 670px;
     padding: 1em 2em;
     border-radius: 1em;
     margin-right: 2em;
@@ -234,7 +235,8 @@
   }
 
   .filter-section .category-link,
-  .filter-section .location-link {
+  .filter-section .location-link,
+  #customerRating {
     font-size: 1.05rem;
   }
 

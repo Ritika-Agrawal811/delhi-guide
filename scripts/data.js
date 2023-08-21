@@ -65,7 +65,7 @@ const data = [
   },
   {
     name: "DLF Promenade Mall",
-    location: "Vasant Vihar",
+    location: "R.K. Puram",
     rating: 4.1,
     openingTime: 11,
     closingTime: 10,
@@ -91,6 +91,15 @@ const data = [
     image: "city-center-mall.jpg",
   },
   {
+    name: "Square One Mall",
+    location: "Pushp Vihar",
+    rating: 4.1,
+    openingTime: 11,
+    closingTime: 9,
+    category: "mall",
+    image: "square-one-mall.jpg",
+  },
+  {
     name: "Unity One Mall",
     location: "Rohini",
     rating: 3.5,
@@ -100,8 +109,17 @@ const data = [
     image: "unity-one-mall.jpg",
   },
   {
+    name: "Southern Park Mall",
+    location: "Saket",
+    rating: 4.1,
+    openingTime: 11,
+    closingTime: 9,
+    category: "mall",
+    image: "southern-park-mall.jpg",
+  },
+  {
     name: "Geetanjali Salon",
-    location: "Connaught Place",
+    location: "Saket",
     rating: 4.4,
     openingTime: 9,
     closingTime: 9,
@@ -111,7 +129,7 @@ const data = [
   },
   {
     name: "Asin Salon",
-    location: "Connaught Place",
+    location: "R.K. Puram",
     rating: 3.9,
     openingTime: 9,
     closingTime: 9,
@@ -139,6 +157,16 @@ const data = [
     category: "salon",
     image: "elvis-reema-salon.jpg",
   },
+  {
+    name: "Looks Salon",
+    location: "Aerocity",
+    rating: 4,
+    openingTime: 10,
+    closingTime: 7,
+    years: 3,
+    category: "salon",
+    image: "looks-salon.jpg",
+  },
 
   {
     name: "Max Super Speciality Hospital",
@@ -149,8 +177,16 @@ const data = [
     image: "max-super-speciality.jpg",
   },
   {
+    name: "Apollo Children's Hospital",
+    location: "Greater Kailash",
+    rating: 4.8,
+    founded: 2010,
+    category: "hospital",
+    image: "apollo-children-hospital.jpg",
+  },
+  {
     name: "Indraprastha Apollo Hospital",
-    location: "Sarita Vihar",
+    location: "Pushp Vihar",
     rating: 4.8,
     founded: 1995,
     category: "hospital",
@@ -166,7 +202,7 @@ const data = [
   },
   {
     name: "Modern School",
-    location: "Mandi House",
+    location: "Greater Kailash",
     rating: 3.8,
     principal: "Dr Vijay Datta",
     founded: 1920,
@@ -174,7 +210,16 @@ const data = [
     category: "school",
     image: "modern-school.jpg",
   },
-
+  {
+    name: "Manav Sthali School",
+    location: "Rajendra Place",
+    rating: 3.75,
+    principal: "Mrs. Dipti bhatnagar",
+    founded: 1957,
+    faculty: 150,
+    category: "school",
+    image: "manav-sthali-school.jpg",
+  },
   {
     name: "Delhi Public School R.K.Puram",
     location: "R.K. Puram",

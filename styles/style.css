@@ -212,7 +212,8 @@ footer p {
 }
 
 .filter-section .category-link,
-.filter-section .location-link {
+.filter-section .location-link,
+#customerRating {
   font-size: 0.85rem;
   color: #262626;
   cursor: pointer;
@@ -221,13 +222,15 @@ footer p {
 }
 
 .filter-section .category-link:hover,
-.filter-section .location-link:hover {
+.filter-section .location-link:hover,
+#customerRating:hover {
   color: #ef5b0c;
   font-weight: 700;
 }
 
 .filter-section .category-link.selected,
-.filter-section .location-link.selected {
+.filter-section .location-link.selected,
+#customerRating.selected {
   color: #ef5b0c;
   font-weight: 700;
   transform: scale(1.05);

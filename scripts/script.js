@@ -1,3 +1,11 @@
+// set copyright year
+const copyrightYear = document.getElementById("copyrightYear");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date();
+  copyrightYear.innerHTML = `${today.getFullYear()}`;
+});
+
 // Set Categories
 let categories = [];
 
@@ -94,15 +102,19 @@ const categoryLinks = document.getElementsByClassName("category-link");
 let previousLink = document.querySelector(".selected");
 let currentLink;
 
+function styleCurrentLink(link) {
+  currentLink = link;
+  currentLink.classList.add("selected");
+  previousLink.classList.remove("selected");
+  previousLink = currentLink;
+}
+
 Array.from(categoryLinks).forEach((link) => {
   link.addEventListener("click", () => {
     const category = link.getAttribute("data-category");
 
     // setting style for current link
-    currentLink = link;
-    currentLink.classList.add("selected");
-    previousLink.classList.remove("selected");
-    previousLink = currentLink;
+    styleCurrentLink(link);
 
     // filtering data
     let filteredData;
@@ -123,16 +135,29 @@ Array.from(locationLinks).forEach((link) => {
     const location = link.getAttribute("data-location");
 
     // setting style for current link
-    currentLink = link;
-    currentLink.classList.add("selected");
-    previousLink.classList.remove("selected");
-    previousLink = currentLink;
+    styleCurrentLink(link);
 
     // filtering data
     const filteredData = data.filter((item) => item.location === location);
 
     displayCards(filteredData);
   });
+});
+
+// sort by customer review
+
+const customerRating = document.getElementById("customerRating");
+
+customerRating.addEventListener("click", () => {
+  // setting style for current link
+  styleCurrentLink(customerRating);
+
+  // filtering data
+  const filteredData = [...data].sort(
+    (item1, item2) => item2.rating - item1.rating
+  );
+
+  displayCards(filteredData);
 });
 
 displayCards(data);

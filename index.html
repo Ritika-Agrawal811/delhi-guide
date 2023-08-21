@@ -63,41 +63,14 @@
             <h4>Location</h4>
             <ul id="locationList"></ul>
           </div>
+          <div class="filter-block">
+            <h4>Sort By</h4>
+            <ul>
+              <li id="customerRating">Customer Rating</li>
+            </ul>
+          </div>
         </aside>
-        <section class="cards-section" id="cardsSection">
-          <!-- <article class="card school-card">
-            <figure>
-              <img
-                src="images/radisson-blu-hotel.jpg"
-                alt="radisson blu hotel"
-              />
-            </figure>
-            <div class="card-content">
-              <h3>Modern School</h3>
-              <div class="flex-gap">
-                <p class="rating">
-                  3.8
-                  <span class="star"></span>
-                </p>
-                <p class="location">
-                  <i class="fa-solid fa-location-dot"></i> Mandi House
-                </p>
-              </div>
-              <div class="details">
-                <p>
-                  <i class="fa-solid fa-school"></i> Principal: Dr Vijay Datta
-                </p>
-                <p><i class="fa-solid fa-user-group"></i> Faculty: 120</p>
-                <p><i class="fa-solid fa-calendar"></i> Founded: 1920</p>
-
-                <p>
-                  Friendly & Supportive Staff &#9679; Clean Washrooms &#9679;
-                  English Medium
-                </p>
-              </div>
-            </div>
-          </article> -->
-        </section>
+        <section class="cards-section" id="cardsSection"></section>
       </div>
     </main>
 
@@ -117,7 +90,9 @@
       </div>
       <hr />
       <div class="container">
-        <p class="copyright">Copyright &#169; 2023</p>
+        <p class="copyright">
+          Copyright &#169; <span id="copyrightYear"></span>
+        </p>
       </div>
     </footer>
     <script src="scripts/data.js"></script>
