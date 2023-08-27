@@ -1,0 +1,22 @@
+{
+  "name": "directory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watchSCSS": "sass --watch ./sass:./styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ritika-Agrawal811/delhi-guide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ritika-Agrawal811/delhi-guide/issues"
+  },
+  "homepage": "https://github.com/Ritika-Agrawal811/delhi-guide#readme",
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}

@@ -1,0 +1,611 @@
+@use "resets";
+@use "mixins";
+@use "variables" as *;
+
+body {
+  font-family: $body-font;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* header */
+
+header {
+  background: linear-gradient(transparent 20%, $wave-color);
+}
+
+/* navigation */
+
+.navbar {
+  @include mixins.display-flex(space-between);
+  padding: 1em;
+
+  @include mixins.max-breakpoint(540px) {
+    position: relative;
+    background-color: #fff;
+  }
+
+  .hamburger {
+    display: block;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.25rem;
+    color: $accent;
+
+    @include mixins.md {
+      display: none;
+    }
+  }
+
+  .menu-list {
+    @include mixins.display-flex;
+
+    @include mixins.max-breakpoint(540px) {
+      position: absolute;
+      width: 100%;
+      height: 3em;
+      left: 0;
+      top: 4em;
+      opacity: 0;
+      background-color: #0c356a;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &.show {
+      @include mixins.max-breakpoint(540px) {
+        opacity: 1;
+      }
+    }
+
+    li a {
+      margin-left: 1em;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: $accent;
+
+      @include mixins.max-breakpoint(540px) {
+        color: #fff;
+      }
+
+      @include mixins.md {
+        font-size: 1.05rem;
+      }
+
+      @include mixins.xl {
+        font-size: 1.15rem;
+      }
+    }
+  }
+}
+
+.site-logo {
+  font-family: $heading-font;
+  font-size: 1.25rem;
+  color: $secondary;
+  font-weight: 700;
+
+  @include mixins.lg {
+    font-size: 1.5rem;
+  }
+
+  @include mixins.xl {
+    font-size: 1.75rem;
+  }
+}
+
+/* Hero Section */
+
+.hero-section {
+  background-image: url("../images/delhi-skyline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5em;
+  height: 300px;
+  padding: 0 1em;
+
+  @include mixins.md {
+    margin-top: 2em;
+    min-height: 87vh;
+  }
+
+  .page-heading {
+    font-size: 2.5rem;
+    color: $secondary;
+    font-family: $heading-font;
+    font-weight: 700;
+
+    @include mixins.md {
+      font-size: 2.75rem;
+      text-align: center;
+    }
+
+    @include mixins.lg {
+      font-size: 3rem;
+    }
+
+    @include mixins.xl {
+      font-size: 4rem;
+    }
+
+    div {
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      color: $accent;
+      margin-top: -0.25em;
+      font-family: $heading-secondary-font;
+
+      @include mixins.md {
+        font-size: 1.75rem;
+      }
+
+      @include mixins.lg {
+        font-size: 1.5rem;
+      }
+
+      @include mixins.xl {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  .subtitle {
+    margin-top: 1em;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: $text-primary;
+
+    @include mixins.md {
+      font-size: 1.05rem;
+      text-align: center;
+    }
+
+    @include mixins.lg {
+      font-size: 1rem;
+    }
+
+    @include mixins.xl {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+/* footer */
+
+footer {
+  background-color: $secondary;
+  color: $primary;
+  padding: 3em 0 1em 0;
+  margin-top: 3em;
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: $primary;
+    margin: 0 auto;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .main-content {
+    @include mixins.display-flex(space-between);
+    flex-direction: column;
+    padding: 0 1em;
+
+    @include mixins.lg {
+      flex-direction: row;
+    }
+
+    @include mixins.xl {
+      flex-direction: row;
+    }
+  }
+
+  figure {
+    width: 100%;
+    height: 130px;
+    margin-top: 2em;
+
+    @include mixins.md {
+      height: 200px;
+    }
+
+    @include mixins.lg {
+      width: 60%;
+      height: 200px;
+      margin-top: 0;
+    }
+
+    @include mixins.xl {
+      height: 300px;
+    }
+  }
+
+  img {
+    object-fit: contain;
+
+    @include mixins.lg {
+      margin-left: 1em;
+    }
+
+    @include mixins.xl {
+      margin-left: 3em;
+    }
+  }
+
+  .site-logo {
+    color: $accent;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 0.25em;
+
+    @include mixins.lg {
+      font-size: 1.15rem;
+      width: 80%;
+    }
+
+    @include mixins.xl {
+      font-size: 1.75rem;
+      width: 100%;
+    }
+  }
+
+  p {
+    font-size: 0.85rem;
+    margin-top: 1em;
+
+    @include mixins.lg {
+      font-size: 0.95rem;
+    }
+
+    @include mixins.xl {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+/* main content */
+
+.explore-section {
+  scroll-margin-top: -10em;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+
+    @include mixins.lg {
+      flex-direction: row;
+    }
+
+    @include mixins.xl {
+      padding: 0;
+    }
+  }
+}
+
+.filter-section {
+  background-color: $primary;
+  box-shadow: 0 0 0.5em $box-shadow;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 2em;
+
+  @include mixins.lg {
+    width: calc(23% - 1em);
+    height: 570px;
+    margin-right: 1em;
+    border-radius: 0.5em;
+    margin-top: 0;
+  }
+
+  @include mixins.xl {
+    width: calc(25% - 1em);
+    height: 670px;
+    padding: 1em 2em;
+    border-radius: 1em;
+    margin-right: 2em;
+  }
+}
+
+.filter-block {
+  margin-bottom: 1em;
+
+  h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5em;
+    color: $secondary;
+    font-weight: 700;
+
+    @include mixins.xl {
+      font-size: 1.35rem;
+    }
+  }
+
+  ul {
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em 0.5em;
+
+    @include mixins.lg {
+      flex-direction: column;
+      gap: 0.15em;
+    }
+  }
+
+  .category-link,
+  .location-link,
+  #customerRating {
+    font-size: 0.85rem;
+    color: $text-primary;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 250ms ease-in-out;
+
+    @include mixins.xl {
+      font-size: 1.05rem;
+    }
+
+    &:hover,
+    &:hover,
+    &:hover {
+      color: $accent;
+      font-weight: 700;
+    }
+
+    &.selected,
+    &.selected,
+    &.selected {
+      color: $accent;
+      font-weight: 700;
+      transform: scale(1.05);
+
+      @include mixins.lg {
+        transform-origin: 0 0;
+        transform: scale(1.15);
+      }
+    }
+  }
+}
+
+/* Cards Section */
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-height: 1040px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: 3em 0;
+  padding: 0 0.5em 0.5em 0.5em;
+
+  @include mixins.md {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include mixins.lg {
+    width: calc(77% - 1em);
+    max-height: 1400px;
+    padding: 0 1em 1em 0.5em;
+    margin: 0 5em 0 0;
+  }
+
+  @include mixins.xl {
+    width: calc(75% - 1em);
+    padding: 0 2em 1em 1em;
+    gap: 2em;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+    border-radius: 100vmax;
+  }
+}
+
+/* Card */
+
+.card {
+  background-color: $primary;
+  box-shadow: 0 0 0.5em $box-shadow;
+  border-radius: 1em;
+  color: $text-primary;
+  transform-origin: 50% 0;
+  animation: zoomIn 500ms ease-in-out 1;
+
+  @include mixins.md {
+    width: calc(50% - 0.5em);
+    border-radius: 0.5em;
+  }
+
+  @include mixins.xl {
+    width: calc(50% - 1em);
+    border-radius: 1em;
+  }
+
+  figure {
+    height: 200px;
+
+    @include mixins.xl {
+      height: 250px;
+    }
+
+    img {
+      border-radius: 1em 1em 0 0;
+
+      @include mixins.md {
+        border-radius: 0.5em 0.5em 0 0;
+      }
+
+      @include mixins.xl {
+        border-radius: 1em 1em 0 0;
+      }
+    }
+  }
+
+  .card-content {
+    padding: 0.5em;
+
+    @include mixins.xl {
+      padding: 1em;
+    }
+
+    .card-title {
+      @include mixins.display-flex(space-between);
+    }
+
+    .card-rating {
+      @include mixins.display-flex;
+      gap: 1em;
+    }
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    color: $card-heading;
+    margin-bottom: 0.25em;
+
+    @include mixins.xl {
+      font-size: 1.5rem;
+    }
+  }
+
+  .rating {
+    @include mixins.display-flex;
+    font-size: 1rem;
+    font-weight: 700;
+
+    @include mixins.xl {
+      font-size: 1.25rem;
+    }
+
+    .star {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-color: #fbbc04;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+      margin-left: 0.25em;
+
+      @include mixins.xl {
+        width: 1.15em;
+        height: 1.15em;
+      }
+    }
+  }
+
+  .location {
+    font-weight: 700;
+    color: $accent;
+    font-size: 0.75rem;
+
+    @include mixins.xl {
+      font-size: 1rem;
+    }
+
+    i {
+      margin-right: 0.25em;
+    }
+  }
+
+  .details {
+    color: $text-secondary;
+    margin: 1em 0 0.5em 0;
+    font-size: 0.75rem;
+
+    @include mixins.xl {
+      font-size: 1rem;
+    }
+
+    i {
+      margin-right: 0.25em;
+    }
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hotel Card */
+
+.hotel-card {
+  .price {
+    font-size: 1rem;
+    font-weight: 700;
+
+    @include mixins.xl {
+      font-size: 1.25rem;
+    }
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    span {
+      display: flex;
+    }
+
+    i {
+      @include mixins.display-flex;
+      width: 1.5em;
+    }
+  }
+}
+
+/* Mall Card */
+
+.mall-card .details p {
+  margin-bottom: 0.25em;
+}
+
+/* Salon Card */
+
+.salon-card .details p span {
+  font-weight: 700;
+}

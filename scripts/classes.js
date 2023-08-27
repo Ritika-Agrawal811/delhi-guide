@@ -21,11 +21,11 @@ class Hotel {
       />
     </figure>
     <div class="card-content">
-      <div class="flex-between">
+      <div class="card-title">
         <h3>${this.name}</h3>
         <p class="price">₹${this.price}</p>
       </div>
-      <div class="flex-gap">
+      <div class="card-rating">
         <p class="rating">
             ${this.rating}
             <span class="star"></span>
@@ -84,7 +84,7 @@ class Mall {
     </figure>
     <div class="card-content">
         <h3>${this.name}</h3>
-        <div class="flex-gap">
+        <div class="card-rating">
         <p class="rating">
             ${this.rating}
             <span class="star"></span>
@@ -141,7 +141,7 @@ class Salon {
     </figure>
     <div class="card-content">
         <h3>${this.name}</h3>
-        <div class="flex-gap">
+        <div class="card-rating">
         <p class="rating">
             ${this.rating}
             <span class="star"></span>
@@ -191,7 +191,7 @@ class Hospital {
     </figure>
     <div class="card-content">
         <h3>${this.name}</h3>
-        <div class="flex-gap">
+        <div class="card-rating">
         <p class="rating">
             ${this.rating}
             <span class="star"></span>
@@ -250,7 +250,7 @@ class School {
     </figure>
     <div class="card-content">
         <h3>${this.name}</h3>
-        <div class="flex-gap">
+        <div class="card-rating">
         <p class="rating">
             ${this.rating}
             <span class="star"></span>
